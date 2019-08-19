@@ -31,5 +31,18 @@ class UnitTestMVVMTests: XCTestCase {
         XCTAssertEqual("Number of items are: \(model.count)", viewModel.detail)
         XCTAssertEqual(.none, viewModel.accessoryType)
     }
+    
+    func testGreaterThanHundredCell() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let model = Model(id: 0, name: "Abdullah", count: 110)
+        let viewModel = ViewModel(model: model)
+        
+        // Model Logic Testing
+        XCTAssertEqual("Count is greater than 100", viewModel.detail)
+        XCTAssertEqual(.disclosureIndicator, viewModel.accessoryType)
+    }
+
 
 }
